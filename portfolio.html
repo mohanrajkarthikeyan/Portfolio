@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohanraj K — Portfolio</title>
+  <meta name="description" content="Aspiring full‑stack developer skilled in Java, Python, Web, AWS, and data visualization. Portfolio of projects, skills, certifications, and contact info." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui']
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#3B82F6',
+              light: '#93C5FD',
+              dark: '#1D4ED8'
+            },
+            accent: '#F97316'
+          },
+          boxShadow: {
+            soft: '0 8px 30px rgba(0,0,0,.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth fade/slide reveal */
+    [data-reveal] { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/70 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2">
+        <div class="h-9 w-9 rounded-xl bg-brand/10 flex items-center justify-center text-brand font-semibold">MK</div>
+        <span class="font-semibold">Mohanraj K</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:text-brand" href="#about">About</a>
+        <a class="hover:text-brand" href="#skills">Skills</a>
+        <a class="hover:text-brand" href="#projects">Projects</a>
+        <a class="hover:text-brand" href="#certs">Certifications</a>
+        <a class="hover:text-brand" href="#education">Education</a>
+        <a class="hover:text-brand" href="#contact">Contact</a>
+        <button id="themeToggle" class="ml-2 rounded-xl border border-slate-200 dark:border-slate-700 px-3 py-1.5 hover:shadow-soft" aria-label="Toggle theme">🌓</button>
+      </nav>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl border border-slate-200 dark:border-slate-700">☰</button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
+        <a class="py-2" href="#about">About</a>
+        <a class="py-2" href="#skills">Skills</a>
+        <a class="py-2" href="#projects">Projects</a>
+        <a class="py-2" href="#certs">Certifications</a>
+        <a class="py-2" href="#education">Education</a>
+        <a class="py-2" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand/10 via-transparent"></div>
+    <div class="max-w-6xl mx-auto px-4 pt-16 pb-8 grid md:grid-cols-2 gap-8 items-center">
+      <div data-reveal>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">Aspiring Full‑Stack Developer & Problem Solver</h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">I build clean, user‑friendly web apps and data‑driven solutions using Java, Python, JavaScript, MySQL, AWS and more.</p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-white font-medium hover:bg-brand-dark shadow-soft">View Projects</a>
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 font-medium hover:shadow-soft">Contact Me</a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-sm">
+          <a class="underline underline-offset-4" href="https://github.com/mohanrajkarthikeyan" target="_blank" rel="noopener">GitHub</a>
+          <a class="underline underline-offset-4" href="https://www.linkedin.com/in/mohanrajkarthikeyan/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="underline underline-offset-4" href="mailto:kmohanraj.off@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="relative" data-reveal>
+        <div class="aspect-square max-w-sm mx-auto rounded-3xl bg-gradient-to-tr from-brand/20 to-accent/20 p-1">
+          <div class="h-full w-full rounded-3xl bg-white dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+            <!-- Replace with your profile image -->
+            <div class="text-center p-8">
+              <div class="text-6xl">👨‍💻</div>
+              <p class="mt-4 text-slate-500 dark:text-slate-300">Add your headshot here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-12">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-2" data-reveal>
+        <h2 class="text-2xl font-semibold">About Me</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">A passionate software developer with strong proficiency in modern web technologies, eager to launch my career and contribute to innovative projects that value growth and impact. I enjoy building responsive UIs, real‑time features, and ML‑powered apps.</p>
+      </div>
+      <div class="md:col-span-1" data-reveal>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Quick Info</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>📍 Chennai, India</li>
+            <li>📧 kmohanraj.off@gmail.com</li>
+            <li>📱 9566036235</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-12 bg-slate-50 dark:bg-slate-950/50">
+    <div class="max-w-6xl mx-auto px-4" data-reveal>
+      <h2 class="text-2xl font-semibold">Skills</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Skill Card -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Programming Languages</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Java, Python, JavaScript, HTML, CSS</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Databases</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Relational DBs (MySQL)</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Cloud</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">AWS (Cloud Practitioner)</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Data & Visualization</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Power BI, Jupyter</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Operating Systems</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Linux</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Web Stack</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">HTML, CSS, JS, PHP</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-12">
+    <div class="max-w-6xl mx-auto px-4" data-reveal>
+      <h2 class="text-2xl font-semibold">Projects</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <!-- Project 1 -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-soft">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">Centralized Disease Detection System</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">A web‑based disease detection app using ML and data analysis with a clean, user‑friendly interface and chatbot.</p>
+            <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">Tech: Python, MySQL, PHP, HTML, CSS, JS</p>
+            <div class="mt-4 flex gap-3">
+              <a class="inline-flex items-center rounded-xl bg-brand px-4 py-2 text-white text-sm font-medium hover:bg-brand-dark" href="https://mohanrajkarthikeyan.github.io/centralized-disease-detector/" target="_blank" rel="noopener">Live Demo</a>
+              <a class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-medium hover:shadow-soft" href="https://github.com/mohanrajkarthikeyan" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-soft">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">Web‑Chat Service</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Real‑time chat with rooms, private messaging, secure communication, and responsive UI.</p>
+            <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">Tech: PHP, MySQL, HTML, CSS, JS</p>
+            <div class="mt-4 flex gap-3">
+              <a class="inline-flex items-center rounded-xl bg-brand px-4 py-2 text-white text-sm font-medium hover:bg-brand-dark" href="https://mohanrajkarthikeyan.github.io/web-chat/" target="_blank" rel="noopener">Live Demo</a>
+              <a class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-medium hover:shadow-soft" href="https://github.com/mohanrajkarthikeyan" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-soft">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">Traffic Volume Estimation (ML)</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">ML‑powered traffic volume prediction to aid urban planning and traffic management.</p>
+            <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">Tooling: Jupyter Notebook</p>
+            <div class="mt-4 flex gap-3">
+              <a class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-medium hover:shadow-soft" href="https://github.com/naanmudhalvan-SI/PBL-NT-GP-14918-1683546257?tab=readme-ov-file#traffic-intelligence---advanced-traffic-volume-estimation-with-machine-learning" target="_blank" rel="noopener">Repository</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Internship -->
+  <section id="certs" class="py-12 bg-slate-50 dark:bg-slate-950/50">
+    <div class="max-w-6xl mx-auto px-4" data-reveal>
+      <h2 class="text-2xl font-semibold">Certifications & Internship</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">AWS Cloud Practitioner</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Amazon Web Services</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Programming Essentials in Python</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Cisco</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Full Stack with Python & JS</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">GUVI</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">JavaScript & OOPs in Java</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Great Learning</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Power BI</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">ICT Academy</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Internship — Web Development</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">CodeClause</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-12">
+    <div class="max-w-6xl mx-auto px-4" data-reveal>
+      <h2 class="text-2xl font-semibold">Education</h2>
+      <ol class="mt-6 relative border-s border-slate-200 dark:border-slate-700">
+        <li class="ms-6 pb-8">
+          <span class="absolute -start-3.5 mt-1 h-6 w-6 rounded-full bg-brand/20 border border-brand"></span>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+            <h3 class="font-semibold">B.E — Computer Science & Engineering <span class="font-normal text-sm text-slate-500">(2020–2024)</span></h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Sri Venkateswaraa College of Technology, Sriperumbudur — CGPA 8.01/10</p>
+          </div>
+        </li>
+        <li class="ms-6 pb-8">
+          <span class="absolute -start-3.5 mt-1 h-6 w-6 rounded-full bg-brand/20 border border-brand"></span>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+            <h3 class="font-semibold">Higher Secondary — Computer Science <span class="font-normal text-sm text-slate-500">(2019–2020)</span></h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">CHSS, MGR Nagar, Chennai — 69%</p>
+          </div>
+        </li>
+        <li class="ms-6">
+          <span class="absolute -start-3.5 mt-1 h-6 w-6 rounded-full bg-brand/20 border border-brand"></span>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+            <h3 class="font-semibold">Secondary <span class="font-normal text-sm text-slate-500">(2017–2018)</span></h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">CHSS, MGR Nagar, Chennai — 87%</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 bg-slate-50 dark:bg-slate-950/50">
+    <div class="max-w-6xl mx-auto px-4" data-reveal>
+      <h2 class="text-2xl font-semibold">Contact</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <form class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft" onsubmit="event.preventDefault(); alert('Thanks! I\'ll get back to you soon.'); this.reset();">
+          <div class="grid gap-4">
+            <input class="rounded-xl border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 outline-none focus:ring-2 focus:ring-brand w-full" placeholder="Your Name" required />
+            <input type="email" class="rounded-xl border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 outline-none focus:ring-2 focus:ring-brand w-full" placeholder="Your Email" required />
+            <textarea rows="4" class="rounded-xl border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 outline-none focus:ring-2 focus:ring-brand w-full" placeholder="Message" required></textarea>
+            <button class="rounded-xl bg-brand px-5 py-3 text-white font-medium hover:bg-brand-dark w-fit">Send Message</button>
+          </div>
+        </form>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-5 shadow-soft">
+          <h3 class="font-medium">Elsewhere</h3>
+          <ul class="mt-3 space-y-3 text-sm">
+            <li>
+              <a class="inline-flex items-center gap-2 underline underline-offset-4" href="mailto:kmohanraj.off@gmail.com">kmohanraj.off@gmail.com</a>
+            </li>
+            <li>
+              <a class="inline-flex items-center gap-2 underline underline-offset-4" href="https://github.com/mohanrajkarthikeyan" target="_blank" rel="noopener">github.com/mohanrajkarthikeyan</a>
+            </li>
+            <li>
+              <a class="inline-flex items-center gap-2 underline underline-offset-4" href="https://www.linkedin.com/in/mohanrajkarthikeyan/" target="_blank" rel="noopener">linkedin.com/in/mohanrajkarthikeyan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8">
+    <div class="max-w-6xl mx-auto px-4 text-sm text-slate-500 dark:text-slate-400 flex flex-col md:flex-row items-center justify-between gap-2">
+      <p>© <span id="year"></span> Mohanraj K. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-brand" href="#home">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Theme toggle (dark / light)
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    function setTheme(mode){
+      if(mode === 'dark'){ root.classList.add('dark'); localStorage.setItem('theme','dark'); }
+      else { root.classList.remove('dark'); localStorage.setItem('theme','light'); }
+    }
+    setTheme(localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    themeToggle?.addEventListener('click', () => setTheme(root.classList.contains('dark') ? 'light' : 'dark'));
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+  </script>
+
+  <!-- JSON-LD (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohanraj K",
+    "jobTitle": "Software Developer",
+    "url": "",
+    "email": "mailto:kmohanraj.off@gmail.com",
+    "sameAs": [
+      "https://github.com/mohanrajkarthikeyan",
+      "https://www.linkedin.com/in/mohanrajkarthikeyan/"
+    ]
+  }
+  </script>
+</body>
+</html>
